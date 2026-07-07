@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/checkout"
+  to = "/.netlify/functions/checkout"
+  status = 200
+  force = true
