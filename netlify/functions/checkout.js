@@ -5,7 +5,7 @@ exports.handler = async (event) => {
     const webhookUrl = 'https://discord.com/api/webhooks/1524078484933185647/cPTAl8I7aiIwbT2Rw6HqFt_TjI6OY9JxFNQNFZEkjDGaqRkuywqpOiyLfZdlaxv4SxWb';
 
     const embed = {
-      title: "🛒 Yeni Sipariş Talebi!",
+      title: "🛒 Yeni Sipariş Talebi! @everyone",
       color: 5192402,
       fields: [
         { name: "👤 Müşteri", value: data.ad_soyad || "Bilinmiyor", inline: true },
